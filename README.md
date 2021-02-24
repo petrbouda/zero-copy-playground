@@ -35,7 +35,7 @@ java -XX:TieredStopAtLevel=1 -agentpath:/home/pbouda/experiments/async-profiler/
 
 #### File to 2GB (Integer#MAX)
 
-- Zero copy (DMA) transfers only 2GB files
+- Zero copy (DMA) transfers only 2GB files MAX and needs to be executed in a loop, does not guarantee to transfer all Integer#MAX files 
 
 ```
 java -XX:TieredStopAtLevel=1 -Xmx300m -classpath ./target/classes pbouda.zerocopy.ZeroCopy     
