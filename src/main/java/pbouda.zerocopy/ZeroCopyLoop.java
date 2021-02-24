@@ -12,6 +12,9 @@ import static pbouda.zerocopy.Constants.TARGET_ZERO;
 public class ZeroCopyLoop {
 
     public static void main(String[] args) throws IOException {
+        System.out.println("Press ENTER");
+        System.in.read();
+
         Files.deleteIfExists(TARGET_ZERO);
         try (FileChannel input = FileChannel.open(SOURCE, READ);
              FileChannel output = FileChannel.open(TARGET_ZERO, CREATE_NEW, WRITE)) {
